@@ -1,0 +1,12 @@
+# Example ansible playbook that checks for nano
+# Run with ansible-playbook playbook.yml
+# Checks nano latest is installed
+# If it is, then it will not make the change
+---
+  - name: check_nano
+    hosts: '0.0.0.0'
+    tasks:
+      - name: checks for nano
+        apt:
+          name: nano
+          state: latest
